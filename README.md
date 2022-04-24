@@ -22,4 +22,4 @@ Windows:
 
 Разработчик: 
 Железникова Полина
-GitHub проекта: 
+GitHub проекта: https://github.com/ZhPolina/Test-task
