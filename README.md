@@ -15,9 +15,13 @@
 Инструкция по сборке:
 
 Windows:
+
 Установить среду разработки Lazarus (https://www.lazarus-ide.org/index.php?page=downloads)
+
 Скачать файлы проекта
+
 В среде Lazarus открыть файл Zheleznikova_notes.lpi
+
 Запустить сборку проекта
 
 Разработчик: 
