@@ -1,0 +1,308 @@
+object MainForm: TMainForm
+  Left = 1106
+  Height = 542
+  Top = 215
+  Width = 652
+  BorderStyle = bsSingle
+  Caption = 'Заметки'
+  ClientHeight = 517
+  ClientWidth = 652
+  Color = 16768443
+  DesignTimePPI = 120
+  Font.CharSet = RUSSIAN_CHARSET
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Menu = MenuEdit
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object PanelNote: TPanel
+    Left = -18
+    Height = 312
+    Top = 32
+    Width = 472
+    Anchors = []
+    BevelColor = clWhite
+    BevelOuter = bvNone
+    ClientHeight = 312
+    ClientWidth = 472
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 2
+    object TextNote: TMemo
+      Left = 112
+      Height = 184
+      Hint = 'Текст заметки'
+      Top = 128
+      Width = 350
+      HelpContext = 1
+      Anchors = []
+      BorderStyle = bsNone
+      Color = 12713983
+      Enabled = False
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clBlack
+      Font.Height = -20
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Lines.Strings = (
+        'Добрый день!'
+        'Хорошего дня:)'
+      )
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      TabStop = False
+    end
+    object NameNote: TMemo
+      Left = 112
+      Height = 40
+      Hint = 'Название заметки'
+      Top = 40
+      Width = 350
+      HelpType = htKeyword
+      Anchors = []
+      BorderStyle = bsNone
+      Color = 8847359
+      Enabled = False
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clBlack
+      Font.Height = -20
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Lines.Strings = (
+        'Новая заметка'
+      )
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object LabelName: TLabel
+      Left = 72
+      Height = 28
+      Top = 9
+      Width = 189
+      Anchors = []
+      Caption = 'Название заметки:'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -23
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentBidiMode = False
+      ParentFont = False
+    end
+    object LabelText: TLabel
+      Left = 72
+      Height = 28
+      Top = 80
+      Width = 144
+      Anchors = []
+      Caption = 'Текст заметки:'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -23
+      Font.Name = 'Calibri'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentBidiMode = False
+      ParentFont = False
+    end
+  end
+  object EditNote: TButton
+    Left = 448
+    Height = 40
+    Top = 200
+    Width = 126
+    Anchors = []
+    Caption = 'Редактировать'
+    Color = clPurple
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = EditNoteClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DeleteNote: TButton
+    Left = 448
+    Height = 32
+    Top = 256
+    Width = 126
+    Anchors = []
+    Caption = 'Удалить'
+    Color = 8454143
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = DeleteNoteClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object SaveNote: TButton
+    Left = 448
+    Height = 40
+    Top = 104
+    Width = 126
+    Anchors = []
+    Caption = 'Сохранить'
+    Color = 16711808
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = SaveNoteClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object SaveNoteAs: TButton
+    Left = 448
+    Height = 40
+    Top = 152
+    Width = 126
+    Anchors = []
+    Caption = 'Сохранить как'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = SaveNoteAsClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object StringGridNotes: TStringGrid
+    Left = 0
+    Height = 181
+    Top = 336
+    Width = 652
+    Align = alBottom
+    Color = 14811135
+    ColCount = 3
+    DefaultRowHeight = 40
+    FixedColor = 11206655
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -20
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    GridLineColor = clBlack
+    ParentFont = False
+    RowCount = 1
+    TabOrder = 5
+    OnSelection = StringGridNotesSelection
+    ColWidths = (
+      102
+      179
+      375
+    )
+    Cells = (
+      2
+      1
+      0
+      'Название'
+      2
+      0
+      'Текст заметки'
+    )
+  end
+  object CreateNote: TButton
+    Left = 448
+    Height = 39
+    Top = 56
+    Width = 126
+    Anchors = []
+    Caption = 'Создать'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -17
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = CreateNoteClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object CheckBoxEdit: TCheckBox
+    Left = 280
+    Height = 24
+    Top = 168
+    Width = 189
+    Caption = 'Режим Редактирования'
+    TabOrder = 7
+    Visible = False
+  end
+  object Panel3: TPanel
+    Left = 382
+    Height = 0
+    Top = 256
+    Width = 0
+    BevelColor = clBlack
+    Caption = 'Удалить'
+    Color = 10066431
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -18
+    Font.Name = 'Calibri'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 8
+    OnClick = Panel2Click
+  end
+  object FontMenu: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 584
+    Top = 176
+  end
+  object SaveMenu: TSaveDialog
+    Left = 584
+    Top = 112
+  end
+  object MenuEdit: TMainMenu
+    Left = 584
+    Top = 240
+    object EditMenu: TMenuItem
+      Caption = 'Изменить'
+      object EditFont: TMenuItem
+        Caption = 'Шрифт'
+        OnClick = EditFontClick
+      end
+    end
+  end
+  object SQLite3Connect: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    AlwaysUseBigint = False
+    Left = 584
+    Top = 56
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 528
+    Top = 56
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Left = 528
+    Top = 120
+  end
+  object Sqlite3Dataset1: TSqlite3Dataset
+    Left = 528
+    Top = 176
+  end
+end
