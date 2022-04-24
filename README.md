@@ -1,4 +1,6 @@
 # Test-task
+Исполняемый файл (EXE) Windows: Notes.exe
+
 
 Заметки
 
