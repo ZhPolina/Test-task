@@ -25,5 +25,6 @@ Windows:
 Запустить сборку проекта
 
 Разработчик: 
+
 Железникова Полина
 GitHub проекта: https://github.com/ZhPolina/Test-task
