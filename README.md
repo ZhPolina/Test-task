@@ -7,6 +7,7 @@
 Используемые технологии:
 
 язык программирования: Delphi
+
 Перечень используемых ресурсов:
 
 иконка приложения: https://www.flaticon.com/ru/free-icon/note_1162910?term=%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8&page=1&position=8&page=1&position=8&related_id=1162910&origin=search
